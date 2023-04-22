@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Create Account</string>
+    <string name="app_name">Smart Water Management App</string>
     <string name="next1">NEXT</string>
     <string name="enter_uid">Enter Username</string>
     <string name="enter_id">Enter ID</string>
@@ -31,4 +31,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="bill">Show Bill</string>
+    <string name="pay">Pay</string>
+    <string name="msg">Your Bill</string>
 </resources>

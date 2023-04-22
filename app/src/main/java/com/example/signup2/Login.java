@@ -46,7 +46,7 @@ public class Login extends AppCompatActivity {
             pass[0] = etloginpass.getText().toString();
 
             DatabaseReference databaseReference;
-            databaseReference = FirebaseDatabase.getInstance().getReference("UserDetails/"+name[0]);
+            databaseReference = FirebaseDatabase.getInstance().getReference("UserDetails");
             
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
@@ -59,7 +59,7 @@ public class Login extends AppCompatActivity {
                     // snapshot of our database.
 
                 if(snapshot.exists()){
-                        //String idr = snapshot.child("uid").getValue(String.class);
+                        String idr = snapshot.child("uid").getValue(String.class);
                         passr[0] = snapshot.child("password").getValue(String.class);
                         //Toast.makeText(Login.this, "Success!!", Toast.LENGTH_SHORT).show();
                         if (pass[0].equals(passr[0])) {
@@ -68,7 +68,7 @@ public class Login extends AppCompatActivity {
 
                         }
                         else {
-                            Toast.makeText(Login.this, name[0], Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, passr[0], Toast.LENGTH_SHORT).show();
                         }
                     }
                     else {

@@ -38,6 +38,7 @@
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.148" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/drawable/side_nav_bar.xml" value="0.148" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/drawable/statistics.xml" value="0.148" />
+        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_adminhome.xml" value="0.13451086956521738" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_adpass.xml" value="0.14356884057971014" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_bill.xml" value="0.264" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_dashboard1.xml" value="0.16666666666666666" />
@@ -46,12 +47,16 @@
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_pass.xml" value="0.2" />
-        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_payment.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_payment.xml" value="0.2" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_rpay.xml" value="0.140625" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_signupadmin.xml" value="0.2" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_start.xml" value="0.10625" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_stastics.xml" value="0.2" />
+        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_statistics.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_supply1.xml" value="0.13451086956521738" />
+        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_userhome.xml" value="0.1" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_userlist.xml" value="0.1" />
+        <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/activity_userstat.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/content_dashboard1.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/fragment_gallery.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/p mms/Downloads/signup2/app/src/main/res/layout/fragment_home.xml" value="0.24895833333333334" />

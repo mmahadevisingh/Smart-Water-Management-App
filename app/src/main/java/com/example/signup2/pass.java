@@ -2,6 +2,7 @@ package com.example.signup2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -56,6 +57,8 @@ public class pass extends AppCompatActivity {
 
                 Toast toast = Toast.makeText(this, "stored", Toast.LENGTH_SHORT);
                 toast.show();
+                Intent intent = new Intent(pass.this,userhome.class);
+                startActivity(intent);
             }
             else
             {

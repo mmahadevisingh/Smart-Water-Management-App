@@ -24,7 +24,7 @@ public class signupadmin extends AppCompatActivity {
         // final String[] id1 = new String[1];
         // set p=new set();
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://aquabal-2b59e-default-rtdb.firebaseio.com/");
+
 
 
         t1=(EditText)findViewById(R.id.editTextTextPersonName2);
