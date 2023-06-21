@@ -1,6 +1,8 @@
 package com.example.signup2;
 
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +18,8 @@ public class set2 {
 
     public String uid1;
     public String pass1;
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Admin");
+
 
     public Map<String, Boolean> stars = new HashMap<>();
 

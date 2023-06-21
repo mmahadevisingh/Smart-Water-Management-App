@@ -41,7 +41,7 @@ public class signupadmin extends AppCompatActivity {
 
             Toast toast = Toast.makeText(this, "stored", Toast.LENGTH_SHORT);
             toast.show();
-            Intent intent = new Intent(signupadmin.this,pass.class);
+            Intent intent = new Intent(signupadmin.this,adpass.class);
             intent.putExtra("id", id1);
             startActivity(intent);
         });

@@ -54,7 +54,7 @@ public class decide extends AppCompatActivity {
                     }
                     else
                     {
-                        Intent intent = new Intent(decide.this, Login.class);
+                        Intent intent = new Intent(decide.this, LoginAdmin.class);
                         startActivity(intent);
                     }
                 }

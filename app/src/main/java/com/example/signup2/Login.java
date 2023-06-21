@@ -3,6 +3,7 @@ package com.example.signup2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,9 +27,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
-
-         Button lb;
+        Button lb;
         final String[] name =new String[1];
         final String[] pass =new String[1];
 
@@ -38,17 +37,21 @@ public class Login extends AppCompatActivity {
 
 
 
-        final String[] passr = new String[1];
+        //final String[] passr = new String[1];
 
         findViewById(R.id.button).setOnClickListener(view -> {
 
             name[0] = etloginname.getText().toString();
             pass[0] = etloginpass.getText().toString();
 
-            DatabaseReference databaseReference;
-            databaseReference = FirebaseDatabase.getInstance().getReference("UserDetails");
-            
-            databaseReference.addValueEventListener(new ValueEventListener() {
+            //DatabaseReference databaseReference;
+            //databaseReference = FirebaseDatabase.getInstance().getReference("UserDetails");
+            //pass p=new pass();
+            set post=new set();
+
+
+
+            post.myRootRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     // this method is call to get the realtime
@@ -58,42 +61,50 @@ public class Login extends AppCompatActivity {
                     // below line is for getting the data from
                     // snapshot of our database.
 
-                if(snapshot.exists()){
-                        String idr = snapshot.child("uid").getValue(String.class);
-                        passr[0] = snapshot.child("password").getValue(String.class);
-                        //Toast.makeText(Login.this, "Success!!", Toast.LENGTH_SHORT).show();
-                        if (pass[0].equals(passr[0])) {
+                    if (snapshot.exists()) {
 
-                            Toast.makeText(Login.this, "Success!!", Toast.LENGTH_SHORT).show();
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            // Get the user object from the snapshot
+                            //User user = userSnapshot.getValue(User.class);
+                            final String passr = dataSnapshot.child("password").getValue(String.class);
+                            final String uid = dataSnapshot.child("uid").getValue(String.class);
+                            if (uid == name[0]) {
+                                if (pass[0].equals(passr)) {
 
-                        }
-                        else {
-                            Toast.makeText(Login.this, passr[0], Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Login.this, "Success!!", Toast.LENGTH_SHORT).show();
+
+                                } else {
+                                    Toast.makeText(Login.this, passr, Toast.LENGTH_SHORT).show();
+                                }
+                            } /*else {
+                                Toast.makeText(Login.this, "No such Username exists!!", Toast.LENGTH_SHORT).show();
+                            }*/
+                            //DatabaseReference db= FirebaseDatabase.getInstance().getReference("UserDetails");
+                            //db.child(value).setValue(ta);
+                            //uid2[0] =value;
+                            // after getting the value we are setting
+                            // our value to our text view in below line.
+                            Intent intent = new Intent(Login.this,userhome.class);
+                            startActivity(intent);
                         }
                     }
-                    else {
-                        Toast.makeText(Login.this, "No such Username exists!!", Toast.LENGTH_SHORT).show();
-                    }
-
-
-                    //DatabaseReference db= FirebaseDatabase.getInstance().getReference("UserDetails");
-                    //db.child(value).setValue(ta);
-                    //uid2[0] =value;
-                    // after getting the value we are setting
-                    // our value to our text view in below line.
                 }
 
-                @Override
+                        @Override
 
-                public void onCancelled(@NonNull DatabaseError error) {
-                    // calling on cancelled method when we receive
-                    // any error or we are not able to get the data.
-                    Toast.makeText(Login.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
-                }
+                        public void onCancelled (@NonNull DatabaseError error){
+                            // calling on cancelled method when we receive
+                            // any error or we are not able to get the data.
+                            Toast.makeText(Login.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
+                        }
+
+
             });
-        });
-
-
+            });
+        }
     }
-}
+
+
+
+
 

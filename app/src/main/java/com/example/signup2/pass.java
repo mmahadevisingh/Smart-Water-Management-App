@@ -39,7 +39,7 @@ public class pass extends AppCompatActivity {
                String id = getIntent().getStringExtra("id");
                 //String id=s.i;
                 DatabaseReference myRootRef = FirebaseDatabase.getInstance().getReference("UserDetails");
-               //DatabaseReference ref = myRootRef.child(id);
+              // DatabaseReference ref = myRootRef.child(id);
 
                 //String key = myRootRef.child("id");
                 set post = new set(id,p1[0]);
@@ -49,9 +49,6 @@ public class pass extends AppCompatActivity {
                 childUpdates.put(id, postValues);
                 //childUpdates.put("/password/" + id + "/" + key, postValues);
                 myRootRef.updateChildren(childUpdates);
-
-
-
 
                 //databaseReference.child("UserDetails").setValue(s.i);
 

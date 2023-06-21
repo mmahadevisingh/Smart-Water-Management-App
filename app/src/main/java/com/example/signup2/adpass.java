@@ -2,6 +2,7 @@ package com.example.signup2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -48,12 +49,14 @@ public class adpass extends AppCompatActivity {
                 Map<String, Object> childUpdat = new HashMap<>();
                 childUpdat.put(id1[0], postV);
                 //childUpdates.put("/password/" + id + "/" + key, postValues);
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Admin");
-                databaseReference.updateChildren(childUpdat);
+                pos.databaseReference.updateChildren(childUpdat);
                 //databaseReference.child("UserDetails").setValue(s.i);
 
                 Toast toast = Toast.makeText(this, "stored", Toast.LENGTH_SHORT);
                 toast.show();
+
+                Intent intent = new Intent(adpass.this,adminhome.class);
+                startActivity(intent);
             }
             else
             {

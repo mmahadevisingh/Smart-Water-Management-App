@@ -54,6 +54,7 @@ public class userstat extends AppCompatActivity {
                         tankid[0] = snapshot.child("Tank_Id").getValue(String.class);
                         //String userid=snapshot.child("userId").getValue(String.class);
                         volume[0] = Objects.requireNonNull(snapshot.child("Volume").getValue()).toString();
+                        //volume[0] = Objects.requireNonNull(snapshot.child("Volume").getValue()).toString();
                         a.setText(date[0]);
                         b.setText(tankid[0]);
                         e.setText(volume[0]);

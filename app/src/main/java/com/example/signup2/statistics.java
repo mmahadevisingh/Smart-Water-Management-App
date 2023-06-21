@@ -1,6 +1,8 @@
 package com.example.signup2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class statistics extends AppCompatActivity {
+public class statistics extends AppCompatActivity implements lis {
 
     RecyclerView recyclerView;
     DatabaseReference database;
@@ -33,7 +35,7 @@ public class statistics extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        myAdapter = new MyAdapter(this,list);
+        myAdapter = new MyAdapter(this,list,this);
         recyclerView.setAdapter(myAdapter);
 
         database.addValueEventListener(new ValueEventListener() {
@@ -55,10 +57,20 @@ public class statistics extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                //User u=new User();
+
 
             }
         });
 
 
+    }
+
+    @Override
+    public void onItemClicked(User u) {
+        Toast.makeText(statistics.this,"clicked",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(statistics.this,stastics.class);
+
+        startActivity(intent);
     }
 }

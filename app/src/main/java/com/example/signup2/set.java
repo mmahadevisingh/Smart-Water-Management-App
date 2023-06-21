@@ -1,6 +1,8 @@
 package com.example.signup2;
 
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.HashMap;
@@ -8,6 +10,8 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class set {
     String i;
+    DatabaseReference myRootRef = FirebaseDatabase.getInstance().getReference("Admin");
+
 
     public void rec(String i)
     {
@@ -27,7 +31,11 @@ public class set {
             this.pass=pass;
         }
 
-        @Exclude
+    public String getPass() {
+        return pass;
+    }
+
+    @Exclude
         public Map<String, Object> toMap() {
             HashMap<String, Object> result = new HashMap<>();
             result.put("uid", uid);
