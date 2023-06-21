@@ -3,7 +3,7 @@ Smart Water Management app is an Android app that shall be able to link water bi
 features. The target audience is both citizens and the government, (made initially for one house).
 
 The app is IoT based, and the usage data is directly recorded via a flow sensor from the user's tank via a flow sensor programmed using Arduino UNO and recieved on firebase database of the app using ESP8266. 
-The app consists of 2 modules- admin and user. As soon as you open the app, you get 2 options- signup and login and for each option, there are futher 2 otions- admin and user. 
+The app consists of 2 modules- admin and user. As soon as you open the app, you get 2 options- signup and login and for each option, there are futher 2 options- admin and user. 
 After successful login/ signup, you are directed to your respective home page. 
 
 The usage data of each user can be viewed by the admin using the details and statistics feature on the admin home page, and generate the bill accordingly.
