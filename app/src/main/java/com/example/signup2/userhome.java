@@ -20,6 +20,10 @@ public class userhome extends AppCompatActivity {
             Intent intent = new Intent(userhome.this,userstat.class);
             startActivity(intent);
         });
+        findViewById(R.id.lg).setOnClickListener(view -> {
+            Intent intent = new Intent(userhome.this,Login.class);
+            startActivity(intent);
+        });
         findViewById(R.id.button).setOnClickListener(view -> {
             SimpleDateFormat sdf = new SimpleDateFormat("'Date\n'dd-MM-yyyy");
 

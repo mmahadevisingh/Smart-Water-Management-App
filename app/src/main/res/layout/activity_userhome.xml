@@ -36,6 +36,13 @@
                 android:layout_height="82dp"
                 android:layout_marginTop="42dp"
                 android:text="STATISTICS" />
+            <Button
+                android:id="@+id/lg"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="42dp"
+                android:text="LOGOUT" />
+
 
 
         </LinearLayout>

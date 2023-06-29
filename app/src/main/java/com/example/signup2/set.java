@@ -10,7 +10,7 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class set {
     String i;
-    DatabaseReference myRootRef = FirebaseDatabase.getInstance().getReference("Admin");
+    DatabaseReference myRootRef = FirebaseDatabase.getInstance().getReference("UserDetails");
 
 
     public void rec(String i)
@@ -30,10 +30,6 @@ public class set {
             this.uid = uid;
             this.pass=pass;
         }
-
-    public String getPass() {
-        return pass;
-    }
 
     @Exclude
         public Map<String, Object> toMap() {
