@@ -33,6 +33,12 @@
             android:layout_height="82dp"
             android:layout_marginTop="42dp"
             android:text="SUPPLY" />
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_marginTop="42dp"
+            android:text="LOGOUT" />
 
 
     </LinearLayout>

@@ -21,5 +21,9 @@ public class adminhome extends AppCompatActivity {
             Intent intent = new Intent(adminhome.this,supply1.class);
             startActivity(intent);
         });
+        findViewById(R.id.logout).setOnClickListener(view -> {
+            Intent intent = new Intent(adminhome.this,LoginAdmin.class);
+            startActivity(intent);
+        });
     }
 }
