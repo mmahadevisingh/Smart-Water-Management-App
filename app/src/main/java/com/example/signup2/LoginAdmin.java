@@ -72,7 +72,7 @@ public class LoginAdmin extends AppCompatActivity {
 
                            uid.trim();
                            String ui=uid.substring(2);
-                            Toast.makeText(LoginAdmin.this, ui, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginAdmin.this, "Please ", Toast.LENGTH_SHORT).show();
                             int x2=ui.length();
                             String s2=Integer.toString(x2);
                           // Toast.makeText(LoginAdmin.this, s, Toast.LENGTH_SHORT).show();
@@ -86,15 +86,22 @@ public class LoginAdmin extends AppCompatActivity {
                             //assert uid != null;
                             if (ui.equals(name2)) {
                                 p[0] = 1;
-                                Toast.makeText(LoginAdmin.this, "click", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(LoginAdmin.this, "click", Toast.LENGTH_SHORT).show();
 
                                 if (pass[0].equals(passr)) {
                                     c[0] = 1;
                                     break;
                                 }
+                                else
+                                {
+                                    c[0]=0;
+                                    break;
+                                }
                             }
-                            /*else
-                                Toast.makeText(LoginAdmin.this, "not", Toast.LENGTH_SHORT).show();*/
+                            else
+                            {
+                                p[0]=0;
+                            }
 
                         }
 
@@ -109,12 +116,9 @@ public class LoginAdmin extends AppCompatActivity {
                                         startActivity(intent2);
 
                                 } else {
-                                    Toast.makeText(LoginAdmin.this, "Failed!!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginAdmin.this, "Incorrect password!!", Toast.LENGTH_SHORT).show();
                                 }
-                            }
-                  //  Intent intent = new Intent(LoginAdmin.this,adminhome.class);
-                  //  startActivity(intent);
-                                    else {
+                            } else if(p[0]==0){
                                 Toast.makeText(LoginAdmin.this, "No such Username exists!!", Toast.LENGTH_SHORT).show();
                             }
                             //DatabaseReference db= FirebaseDatabase.getInstance().getReference("UserDetails");
