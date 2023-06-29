@@ -19,7 +19,7 @@ public class LoginAdmin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_admin);
-        Button lb;
+       // Button lb;
         final String[] name =new String[1];
         final String[] pass =new String[1];
         final int[] c=new int[1];
@@ -65,16 +65,26 @@ public class LoginAdmin extends AppCompatActivity {
                             //User user = userSnapshot.getValue(User.class);
                             final String passr = dataSnapshot.child("password").getValue(String.class);
                              final String uid = dataSnapshot.child("uid").getValue(String.class);
+                           //Toast.makeText(LoginAdmin.this, name2, Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(LoginAdmin.this, uid, Toast.LENGTH_SHORT).show();
                              int x=name2.length();
                              String s=Integer.toString(x);
-                            int x2=uid.length();
+
+                           uid.trim();
+                           String ui=uid.substring(2);
+                            Toast.makeText(LoginAdmin.this, ui, Toast.LENGTH_SHORT).show();
+                            int x2=ui.length();
                             String s2=Integer.toString(x2);
-                           // s2.trim();
+                          // Toast.makeText(LoginAdmin.this, s, Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(LoginAdmin.this, s2, Toast.LENGTH_SHORT).show();
+
+
+
 
 
 
                             //assert uid != null;
-                            if (uid.equals(name2)) {
+                            if (ui.equals(name2)) {
                                 p[0] = 1;
                                 Toast.makeText(LoginAdmin.this, "click", Toast.LENGTH_SHORT).show();
 
@@ -83,8 +93,8 @@ public class LoginAdmin extends AppCompatActivity {
                                     break;
                                 }
                             }
-                            else
-                                Toast.makeText(LoginAdmin.this, "not", Toast.LENGTH_SHORT).show();
+                            /*else
+                                Toast.makeText(LoginAdmin.this, "not", Toast.LENGTH_SHORT).show();*/
 
                         }
 
@@ -102,11 +112,11 @@ public class LoginAdmin extends AppCompatActivity {
                                     Toast.makeText(LoginAdmin.this, "Failed!!", Toast.LENGTH_SHORT).show();
                                 }
                             }
-                    Intent intent = new Intent(LoginAdmin.this,adminhome.class);
-                    startActivity(intent);
-                                    /*else {
+                  //  Intent intent = new Intent(LoginAdmin.this,adminhome.class);
+                  //  startActivity(intent);
+                                    else {
                                 Toast.makeText(LoginAdmin.this, "No such Username exists!!", Toast.LENGTH_SHORT).show();
-                            }*/
+                            }
                             //DatabaseReference db= FirebaseDatabase.getInstance().getReference("UserDetails");
                             //db.child(value).setValue(ta);
                             //uid2[0] =value;
