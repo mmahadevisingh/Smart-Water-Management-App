@@ -27,15 +27,19 @@ public class payment extends AppCompatActivity implements PaymentResultListener 
     TextView a1;
     Button b,b1;
     DatabaseReference reff2;
+    String bill1;
+    String bl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
 
         a1=(TextView) findViewById(R.id.textView2);
-        final String [] bill=new String[1];
         b=(Button) findViewById(R.id.button);
         b1=(Button) findViewById(R.id.button10);
+        final String [] bill=new String[1];
+
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +52,10 @@ public class payment extends AppCompatActivity implements PaymentResultListener 
 
                         //User user = dataSnapshot.getValue(User.class);
                         bill[0] = Objects.requireNonNull(snapshot.child("Bill_Amount").getValue()).toString();
+                        bill1=bill[0];
                         bill[0]="Rs."+bill[0];
+
+                        //bill[0]=Integer.toString(bill[0]);
 
                         a1.setText(bill[0]);
                     }
@@ -94,7 +101,7 @@ public class payment extends AppCompatActivity implements PaymentResultListener 
             options.put("allow_rotation",false);
 
             options.put("currency","INR");
-            options.put("amount","100");
+            options.put("amount",Integer.toString(Integer.parseInt(bill1)*100));
 
             JSONObject prefill=new JSONObject();
             prefill.put("email"," ");
